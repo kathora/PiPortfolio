@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #F2D8CE;
+}
+
+section{
+    position: relative;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section .logo{
+    position: fixed;
+    top: 30px;
+    color: rgba(0, 0, 0, 0.719);
+    font-weight: 700;
+    font-size: 2em;
+    z-index: 100;
+    cursor: pointer;
+}
+
+section .bg{
+    position: absolute;
+    top: 0;
+    right: 60px;
+    height: 100%;
+}
+
+section .content{
+    position: relative;
+    max-width:650px;
+    z-index: 1;
+}
+
+section .content h2{
+    color: rgba(0, 0, 0, 0.719);
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+section .content p{
+    color: rgba(0, 0, 0, 0.719);
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+
+section .content a{
+    color: #fff;
+    background: #734439;
+    font-size: 1em;
+    margin: 20px 0;
+    font-weight: 500;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.copyrighttext{
+    position: absolute;
+    bottom: 20px;
+    color: rgba(0, 0, 0, 0.719);
+    font-size: 1.1em;
+    margin: 20px 0 10px;
+}
+
+.menuToggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #734439 url(IMG/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/*
+.navigation{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.navigation ul{
+    position: relative;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.navigation a{
+    font-size: 2.5em;
+    color: #111;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navigation a:hover{
+    color: #f60f20;
+}
