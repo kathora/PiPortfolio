@@ -35,11 +35,12 @@ section .bg{
     top: 0;
     right: 60px;
     height: 100%;
+    width: 45%;
 }
 
 section .content{
     position: relative;
-    max-width:650px;
+    max-width:700px;
     z-index: 1;
 }
 
@@ -88,11 +89,18 @@ section .content a{
     cursor: pointer;
     z-index: 1000;
 }
-/*
+
+.menuToggle.active{
+    background: #734439 url(IMG/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+}
+
 .navigation{
     position: fixed;
     top: 0;
-    left:0;
+    left:calc(100% - 60px);
     width: 100%;
     height: 100%;
     background: #fff;
@@ -101,6 +109,10 @@ section .content a{
     justify-content: center;
     align-items: center;
     transition: 0.2s;
+}
+
+.navigation.active{
+    left:0px
 }
 
 .navigation ul{
@@ -121,5 +133,95 @@ section .content a{
 }
 
 .navigation a:hover{
-    color: #f60f20;
+    color: #592418;
+}
+
+.socialBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialBar ul{
+    position: relative;
+}
+
+.socialBar ul li{
+    position: relative;
+    list-style: none;
+}
+
+.socialBar ul li a{
+    position: relative;
+    display: inline-block;
+}
+
+.socialBar .emailBx{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.6);
+}
+
+@media (max-width: 767px){
+
+    body{
+        background: #592418;
+    }
+
+    section{
+        padding: 100px 40px;
+    }
+
+    section .content h2{
+        color: #fff;
+        font-size: 2.5em;
+        font-weight: 700;
+        line-height: 1.1em;
+        max-width: 767px
+    }
+
+   .navigation{
+       left: 100%;
+   }
+
+   section .bg{
+       position: absolute;
+       top: 0;
+       right: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       opacity: 0.5;
+   }
+
+   section .logo{
+    top: 10px;
+    font-size: 1.5em;
+    color: white;  
+   }
+
+   .navigation ul li a{
+       font-size: 1.8em;
+   }
+
+   section .content p{
+    color: white;
+    font-size: 1em;
+   }
+
+   section .content a{
+       background:#F2D8CE;
+       color: rgba(0, 0, 0, 0.719);
+   }
+
+   .copyrighttext{
+       color: white;
+       font-size: 1em;
+   }
 }
